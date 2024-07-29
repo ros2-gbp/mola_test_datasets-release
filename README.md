@@ -1,3 +1,26 @@
+## mola_test_datasets (rolling) - 0.3.4-1
+
+The packages in the `mola_test_datasets` repository were released into the `rolling` distro by running `/usr/bin/bloom-release -y -r rolling mola_test_datasets` on `Mon, 29 Jul 2024 12:58:09 -0000`
+
+The `mola_test_datasets` package was released.
+
+Version of package(s) in repository `mola_test_datasets`:
+
+- upstream repository: https://github.com/MOLAorg/mola_test_datasets.git
+- release repository: https://github.com/ros2-gbp/mola_test_datasets-release.git
+- rosdistro version: `0.3.3-1`
+- old version: `0.3.3-1`
+- new version: `0.3.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## mola_test_datasets (jazzy) - 0.3.4-1
 
 The packages in the `mola_test_datasets` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release -y -r jazzy mola_test_datasets` on `Mon, 29 Jul 2024 12:53:09 -0000`
