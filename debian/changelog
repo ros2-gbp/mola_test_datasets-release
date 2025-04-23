@@ -1,0 +1,70 @@
+ros-kilted-mola-test-datasets (0.4.0-2noble) noble; urgency=high
+
+  * Add extract of KAIST01 from Mulran dataset with LiDAR, IMU, GPS and GT
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Sat, 11 Jan 2025 06:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.3.4-2noble) noble; urgency=high
+
+  * Add new warehouse RSLidar test dataset with XYZIR channels
+  * add MVSim warehouse 01 dataset resulting simplemaps
+  * Add tree index for html version
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Mon, 29 Jul 2024 05:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.3.3-2noble) noble; urgency=high
+
+  * add loop_closure example datasets
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Sat, 18 May 2024 05:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.3.2-2noble) noble; urgency=high
+
+  * bump cmake_minimum_required to 3.5
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Mon, 06 May 2024 05:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.3.1-2noble) noble; urgency=high
+
+  * Fix all radish rawlog timestamps (Carmen logs did not include timing)
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Tue, 02 Apr 2024 05:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.3.0-2noble) noble; urgency=high
+
+  * clarify copyright notices.
+  * add file attribute to <license> tag
+  * minor fixes
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Sat, 20 Jan 2024 06:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.2.2-2noble) noble; urgency=high
+
+  * Fix package name in docs
+  * Build as correct ament package. Add license file
+  * Add package.xml and reorganize data files
+  * fix cmake lib name
+  * add 2lidar+odo dataset
+  * add radish test datasets
+  * fix copyright
+  * import a tiny extract of Kitti00 (lidar) for unit tests
+  * add example 2D slam dataset
+  * add sample g2o dataset
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Fri, 08 Sep 2023 05:00:00 -0000
+
+ros-kilted-mola-test-datasets (0.2.1-2noble) noble; urgency=high
+
+  * Initial commit
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- Jose-Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Mon, 24 Jun 2019 05:00:00 -0000
+
+
