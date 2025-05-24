@@ -5,7 +5,7 @@
 -->
 <package format="3">
   <name>mola_test_datasets</name>
-  <version>0.4.0</version>
+  <version>0.4.1</version>
   <description>Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages</description>
 
   <author     email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</author>
@@ -14,10 +14,10 @@
   <url type="website">https://github.com/MOLAorg/</url>
 
   <!-- ROS package files and READMEs -->
-  <license file="LICENSE">BSD</license>
+  <license file="LICENSE">BSD-3-Clause</license>
 
   <!-- Dataset licenses -->
-  <license file="datasets/g2o/LICENSE">BSD</license>
+  <license file="datasets/g2o/LICENSE">BSD-3-Clause</license>
   <license file="datasets/kitti/LICENSE">CC-BY-NC-SA-3.0</license>
   <license file="datasets/radish/LICENSE">CC-BY-3.0</license>
   <license file="datasets/ual/LICENSE">CC-BY-3.0</license>
