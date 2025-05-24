@@ -19,7 +19,6 @@ project(mola_test_datasets LANGUAGES CXX)
 # Instrumental lib:
 add_library(${PROJECT_NAME} INTERFACE)
 
-
 # Install files:
 install(DIRECTORY
   datasets
@@ -33,10 +32,9 @@ install(DIRECTORY
 if (DETECTED_ROS2)
 	# find dependencies
 	find_package(ament_cmake REQUIRED)
-
-	#ament_target_dependencies(MY_TARGET
-	#  rclcpp...
-	#)
-
 	ament_package()
 endif()
+
+# Silent cmake warning:
+set(dummy CMAKE_EXPORT_COMPILE_COMMANDS)
+unset(dummy)
