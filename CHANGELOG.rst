@@ -2,6 +2,13 @@
 Changelog for package mola_test_datasets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.1 (2025-05-24)
+------------------
+* readme: update badges to include kilted
+* cmake: silent warning if using CMAKE_EXPORT_COMPILE_COMMANDS (this is a non-code package)
+* package.xml: Update license tag to "BSD-3-Clause"
+* Contributors: Jose Luis Blanco-Claraco
+
 0.4.0 (2025-01-11)
 ------------------
 * Add extract of KAIST01 from Mulran dataset with LiDAR, IMU, GPS and GT
