@@ -5,7 +5,7 @@
 -->
 <package format="3">
   <name>mola_test_datasets</name>
-  <version>0.4.2</version>
+  <version>0.5.0</version>
   <description>Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages</description>
 
   <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
