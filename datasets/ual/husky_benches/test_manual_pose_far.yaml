@@ -1,0 +1,18 @@
+# Localization from a manual initial pose 5 m and 13 deg off the real one,
+# along the wall direction, which the scene only weakly constrains. A fixed
+# pose is not searched around (no global search): LIO must not end up
+# localized, which shows the scene needs a search from such priors.
+dataset: dataset.yaml
+
+initial_localization:
+  method: InitLocalization::FixedPose
+  # [x, y, z, yaw_deg, pitch_deg, roll_deg] in the map frame.
+  # Ground truth: [-8.62, 0.82, 0.03, -23.3, 0, 0]
+  pose: [-3.95, -0.96, 0.0, -10.0, 0.0, 0.0]
+
+expected:
+  # Compared with the ground truth over the last seconds of the fragment
+  # (robot still after the maneuver):
+  evaluate_last_seconds: 4.0
+  localized: false
+  min_position_error: 1.0 # [m]
