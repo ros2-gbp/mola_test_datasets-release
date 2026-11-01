@@ -1,0 +1,24 @@
+# Same as test_gnss_global_search.yaml, without the global search: LIO starts
+# from the state estimator pose, ~5 m off and with an unknown heading, and must
+# not end up localized. This checks that the GNSS prior of this dataset is bad
+# enough to need the search.
+dataset: dataset.yaml
+
+initial_localization:
+  method: InitLocalization::FromStateEstimator
+  gnss_mode: relocalize
+  gnss_topic: /a200_0812/gnss/ublox
+  env:
+    MOLA_LO_INIT_GLOBAL_SEARCH: false
+    # Accept the state estimator pose with the same sigmas as with the search:
+    MOLA_SE_CONVERGENCE_POS_SIGMA: 5.0
+    MOLA_SE_CONVERGENCE_ORI_SIGMA: 180.0
+    MOLA_LO_INIT_SE_MAX_POS_SIGMA: 5.0
+    MOLA_LO_INIT_SE_MAX_ORI_SIGMA: 180.0
+
+expected:
+  # Compared with the ground truth over the last seconds of the fragment
+  # (robot still after the maneuver):
+  evaluate_last_seconds: 4.0
+  localized: false
+  min_position_error: 1.0 # [m]
