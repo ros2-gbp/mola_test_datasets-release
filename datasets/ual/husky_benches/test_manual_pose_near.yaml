@@ -1,0 +1,17 @@
+# Localization from a manual initial pose 0.39 m and 4 deg off the real one,
+# within the ICP convergence basin: LIO must converge to the real place.
+dataset: dataset.yaml
+
+initial_localization:
+  method: InitLocalization::FixedPose
+  # [x, y, z, yaw_deg, pitch_deg, roll_deg] in the map frame.
+  # Ground truth: [-8.62, 0.82, 0.03, -23.3, 0, 0]
+  pose: [-8.32, 0.57, 0.0, -19.3, 0.0, 0.0]
+
+expected:
+  # Compared with the ground truth over the last seconds of the fragment
+  # (robot still after the maneuver):
+  evaluate_last_seconds: 4.0
+  localized: true
+  max_position_error: 0.5 # [m]
+  max_yaw_error_deg: 3.0
