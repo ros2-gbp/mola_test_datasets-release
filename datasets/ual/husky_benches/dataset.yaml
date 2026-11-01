@@ -1,0 +1,57 @@
+# Clearpath Husky A200 (UAL) outdoors, in an area with a long straight wall and
+# parallel, evenly spaced rows of benches: the scene only weakly constrains the
+# position along the wall direction. The robot stands still, then makes a short
+# maneuver (t = 18 to 25 s from the start).
+#
+# Files:
+#  - husky_benches_fragment.mcap: 30 s of the original rosbag2. Ouster clouds
+#    decimated to 2 Hz (every 5th scan), without invalid (zero) points and with
+#    only the fields x y z intensity t ring. Other topics at their full rate.
+#    tf_static and ouster/metadata are re-written at the fragment start, and
+#    tf_static also has base_link -> imu and base_link -> gps_ublox (identity,
+#    published on /tf by the sensor drivers on the robot; /tf is left out, since
+#    it had the localization output of the robot run).
+#  - husky_benches_map.mm: map built offline from another dataset of the same
+#    place (MOLA LIO, one "localmap" layer of class mola::IncrementalPointCloud),
+#    geo-referenced, cropped to x in [-30, 22] m, y in [-26, 24] m, with only the
+#    point fields x y z and view_x view_y view_z (used by the LIO view-direction
+#    filter).
+#  - husky_benches_fragment_gt.tum: ground truth of base_link in the map frame,
+#    one pose per LiDAR scan, from the registration of each scan against the map
+#    (std. dev. while standing still: 3 cm, 0.2 deg).
+#
+# Test cases: test_*.yaml in this directory.
+
+fragment: husky_benches_fragment.mcap
+map: husky_benches_map.mm
+ground_truth: husky_benches_fragment_gt.tum
+
+# Fragment time span (stamps of the original dataset) [s]:
+start_stamp: 1793187068.306177242
+duration: 30.0
+
+# Robot still at the start; first motion at about +18 s:
+still_until_stamp: 1793187086.3
+
+frames:
+  base_link: base_link
+  lidar: os_lidar
+  imu: os_imu
+
+topics:
+  lidar: /a200_0812/ouster/points # 2 Hz
+  lidar_imu: /a200_0812/ouster/imu # 100 Hz
+  wheel_odometry: /a200_0812/platform/odom # 18 Hz
+  gnss: /a200_0812/gnss/ublox # 1 Hz, no RTK (sigma ~4 m)
+  attitude_imu: /a200_0812/taobotics/imu # 150 Hz, absolute attitude
+  tf_static: /a200_0812/tf_static
+  lidar_metadata: /a200_0812/ouster/metadata
+
+# MOLA LIO settings shared by the test cases (localization only):
+lidar_odometry:
+  pipeline: lidar3d-gicp.yaml
+  use_imu_for_lio: true
+  use_state_estimator: true # the smoother
+  start_mapping_enabled: false
+  env:
+    MOLA_LOCALMAP_CLASS: mola::IncrementalPointCloud
