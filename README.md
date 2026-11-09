@@ -1,3 +1,26 @@
+## mola_test_datasets (humble) - 0.6.1-1
+
+The packages in the `mola_test_datasets` repository were released into the `humble` distro by running `/home/jlblanco/.local/bin/bloom-release --ros-distro humble --track humble --non-interactive --no-web mola_test_datasets` on `Mon, 09 Nov 2026 23:41:48 -0000`
+
+The `mola_test_datasets` package was released.
+
+Version of package(s) in repository `mola_test_datasets`:
+
+- upstream repository: https://github.com/MOLAorg/mola_test_datasets.git
+- release repository: https://github.com/ros2-gbp/mola_test_datasets-release.git
+- rosdistro version: `0.6.0-1`
+- old version: `0.6.0-1`
+- new version: `0.6.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## mola_test_datasets (rolling) - 0.6.0-1
 
 The packages in the `mola_test_datasets` repository were released into the `rolling` distro by running `/home/jlblanco/code/bloom-venv/bin/bloom-release --rosdistro rolling mola_test_datasets` on `Sun, 01 Nov 2026 19:41:05 -0000`
