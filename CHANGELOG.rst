@@ -2,6 +2,13 @@
 Changelog for package mola_test_datasets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.1 (2026-11-10)
+------------------
+* husky_benches: store bag QoS policies as integers so Humble can play it
+  Humble's rosbag2 fails to parse string-valued QoS policies ("bad conversion").
+  Newer distros accept both formats. Message data is unchanged.
+* Contributors: Jose Luis Blanco-Claraco
+
 0.6.0 (2026-11-01)
 ------------------
 * New husky_benches dataset: Husky A200 Ouster fragment with map and ground truth, for initial localization tests
